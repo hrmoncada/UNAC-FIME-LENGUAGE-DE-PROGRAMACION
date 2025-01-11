@@ -1,0 +1,220 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage{amsmath}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{url}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% page format
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\linespread{1}
+\usepackage
+[
+        a4paper,% other options: a3paper, a5paper, etc
+        left=1cm,
+        right=1cm,
+        top=.7cm,
+        bottom=1cm,
+        % use vmargin=2cm to make vertical margins equal to 2cm.
+        % us  hmargin=3cm to make horizontal margins equal to 3cm.
+        % use margin=3cm to make all margins  equal to 3cm.
+]
+{geometry}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% lstlisting
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{listings}             % Include the listings-package
+\usepackage{alltt}
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{codepurple},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\small,
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbers=left,
+    numbersep=5pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=2,
+    language=Fortran
+}
+
+\lstset{style=mystyle}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Graphs path to the Picture Folder
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\graphicspath{{Pictures/}{Data/}} % Two folders Picture and Data
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\myUniversidad}{UNIVERSIDAD NACIONAL DEL CALLAO}
+\newcommand{\myFacultad}{FACULTAD DE CIENCIAS NATURALES Y MATEM\'ATICA}
+\newcommand{\myEscuelaProfesional}{ESCUELA PROFESIONAL DE F\'ISICA}
+\newcommand{\myCurso}{F\'ISICA COMPUTACIONAL 2}
+\newcommand{\myTarea }{Tarea }
+\newcommand{\myNombre}{Tu nombre}
+\newcommand{\myEmail}{email\_name@unac.gob,pe}
+\newcommand{\myNumTarea}{1}
+
+\pagestyle{fancyplain}
+\lhead{\fancyplain{}{\textbf{Tarea \myNumTarea}}}      
+\rhead{\fancyplain{}{\myNombre}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% bibliography
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\bibliographystyle{plain}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Begin Document
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+% \includegraphics[width=0.1\textwidth]{Escudo_UNAC.png}\\[.5cm]
+% \institute{\large UNIVERSIDAD NACIONAL DEL CALLAO
+% FACULTAD DE CIENCIAS NATURALES Y MATEM\'ATICA\\
+%ESCUELA PROFESIONAL DE F\'ISICA\\}
+% \title{\LARGE  F\'ISICA COMPUTACIONAL 2 \\
+% \large SEMESTRE 2024 - 1\\
+% \LARGE TAREA N\'UMERO 1}
+% \author{Tu Nombre}
+
+% \begin{center}
+% \includegraphics[width=0.1\textwidth]{Escudo_UNAC.png}\\[.5cm]
+% \textsc{\large UNIVERSIDAD NACIONAL DEL CALLAO}\\
+% \textsc{FACULTAD DE CIENCIAS NATURALES Y MATEM\'{A}TICA}\\
+% \textsc{ESCUELA PROFESIONAL DE F\'{I}SICA}\\[.5cm]
+% \textsc{\LARGE  F\'ISICA COMPUTACIONAL 2}\\
+% \textsc{SEMESTRE 2024 - 1}\\[.5cm]
+% \textsc{\LARGE  Tarea 1}\\[.5cm]
+% \textsc{\LARGE Tu Nombre}\\
+%  {\large \today}
+% \end{center}
+%--------------------------------------------------------------------------------------------------
+\thispagestyle{plain} % plain permite que la primera pagina no aparescan la barra en la parte superior de la pagina
+%--------------------------------------------------------------------------------------------------
+\begin{center} 
+\includegraphics[width=0.1\textwidth]{Escudo_UNAC.png}\\[.5cm]
+\Large{                 % Center the following lines
+\myUniversidad\\
+\myFacultad\\ 
+\myCurso\\
+{\myTarea \myNumTarea}\\
+\myNombre\\
+\myEmail\\
+\today}
+\end{center} 
+
+\centerline{\underline{\hspace{7in}}}
+%\maketitle
+
+\section*{Problema 1}
+\begin{itemize}
+    \item Enunciado del problema.
+    \item Datos:
+        \begin{itemize}
+            \item Lista de cantidades dadas o información proporcionada.
+            \item Puedes incluir tablas de datos si es necesario.
+        \end{itemize}
+    \item A encontrar:
+        \begin{itemize}
+            \item Lista de cantidades o resultados a encontrar.
+        \end{itemize}
+\end{itemize}
+
+\textbf{Soluci\'on:}
+%      \\\\
+% Escribe aquí tu soluci\'on paso a paso. Puedes incluir ecuaciones, figuras, explicaciones y c\'odigo.
+% ... \\\\
+\begin{equation}
+    \text{Ecuaciones aquí}
+\end{equation}
+\\
+% \begin{figure}[h]
+%     \centering
+%     \includegraphics[width=0.5\textwidth]{figura.jpg}
+%     \caption{Descripción de la figura}
+% \end{figure}
+
+% \\
+\begin{lstlisting}
+! Codigo Fortran aqui
+PROGRAM ejemplo
+  IMPLICIT NONE
+  INTEGER :: i, n
+  REAL :: x, sum
+
+  n = 100
+  sum = 0.0
+
+  DO i = 1, n
+    x = REAL(i)
+    sum = sum + x**2
+  END DO
+
+  PRINT *, 'La suma de los cuadrados es: ', sum
+
+END PROGRAM ejemplo
+\end{lstlisting}
+
+\section*{Preguntas de Programación}
+\begin{enumerate}
+    \item ¿Qué modificaciones harías al código anterior para calcular la suma de los cubos en lugar de los cuadrados?
+    \item ¿Cómo podrías generalizar el código para calcular la suma de las potencias n-ésimas de los números enteros del 1 al m?
+\end{enumerate}
+\begin{equation}
+  x_{n+1}  =  x_n - m\;f(x)\left[\frac{x_n-x_{n-1}}{f(x_n)-f(x_{n-1}}\right]
+\end{equation}
+\hspace{1mm}\\
+For $m=\frac{1+\sqrt{5}}{2}=1.618$\\
+\begin{verbatim}
+Steps        xa              xb               xi           f(xi)       |(xn+1-xn)|
+----------------------------------------------------------------------------------
+  0  1.500000000000  1.600000000000  1.633191538329 -0.001945949763  0.033191538329 
+  1  1.600000000000  1.633191538329  1.564416498720 -0.000020351034  0.068775039609 
+  2  1.633191538329  1.564416498720  1.563240412447 -0.000028545785  0.001176086273 
+  3  1.564416498720  1.563240412447  1.569869184045 -0.000000429797  0.006628771598 
+  4  1.563240412447  1.569869184045  1.570033141259 -0.000000291226  0.000163957214 
+  5  1.569869184045  1.570033141259  1.570590682342 -0.000000021145  0.000557541083 
+  6  1.570033141259  1.570590682342  1.570661309883 -0.000000009115  0.000070627541 
+  7  1.570590682342  1.570661309883  1.570747894571 -0.000000001173  0.000086584688 
+  8  1.570661309883  1.570747894571  1.570768583633 -0.000000000385  0.000020689062 
+  9  1.570747894571  1.570768583633  1.570784932394 -0.000000000065  0.000016348761 
+ 10  1.570768583633  1.570784932394  1.570790299953 -0.000000000018  0.000005367559 
+ 11  1.570784932394  1.570790299953  1.570793673498 -0.000000000004  0.000003373545 
+ 12  1.570790299953  1.570793673498  1.570794985787 -0.000000000001  0.000001312289 
+ 13  1.570793673498  1.570794985787  1.570795714281 -0.000000000000  0.000000728494 
+\end{verbatim}
+A point in the \verb+Y-axis+ represents the measured performance \verb+GFLOP/s+. This performance number can be compared against the bounds set by the
+peak compute performance \verb+(Peak GFLOPs)+ and the memory bandwidth of the system \verb+(Peak GB/s)+ to determine what is limiting performance: memory or compute\cite{Ding_and_Williams}.\cite{Yang_Kurth_Willians}
+
+
+
+SCIENTIFIC PROGRAMMING LANGUAGE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                   Appendices page                            %                    
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\appendix
+\addcontentsline{toc}{section}{Appendices}
+\section*{Appendices}
+\input{Appendix.tex}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                  Bibliography  or References page                            %                    
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%      
+\newpage
+%\nocite{*}
+\bibliography{References/myBibliography}
+\end{document}
